@@ -1,9 +1,8 @@
-
 import PyPDF2
-import nltk
+# import nltk
 from nltk.corpus import words
 from tqdm import tqdm
-from fpdf import FPDF
+# from fpdf import FPDF
 import pickle
 import os
 import json

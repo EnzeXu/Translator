@@ -1,0 +1,5 @@
+PyPDF2
+tqdm
+nltk
+fpdf2
+requests
