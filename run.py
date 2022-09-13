@@ -9,7 +9,8 @@ warnings.filterwarnings("ignore")
 
 def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path", "-p", type=str, default="files/test.pdf", help="file path")
+    parser.add_argument("-p", "--path", type=str, default="files/test.pdf", help="file path")
+    parser.add_argument("-y", "--yes", action='store_true')
     opt = parser.parse_args()
     path = opt.path
     if not os.path.exists(path):
@@ -29,10 +30,11 @@ def run():
     if os.path.exists(translated_path):
         print("File {} exists. Skip translating".format(translated_path))
     else:
-        answer = input("Continue translating? [Y/N]")
-        if answer not in ["Y", "y"]:
-            print("Exit.")
-            return
+        if not opt.yes:
+            answer = input("Continue translating? [Y/N]")
+            if answer not in ["Y", "y"]:
+                print("Exit.")
+                return
         else:
             translator(detected_path, translated_path)
 
