@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore")
 
 def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--path", type=str, default="files/test.pdf", help="file path")
+    parser.add_argument("-p", "--path", type=str, default="files/PLEASE_GIVE_THE_FILE_PATH.pdf", help="file path")
     parser.add_argument("-y", "--yes", action='store_true')
     opt = parser.parse_args()
     path = opt.path

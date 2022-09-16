@@ -7,12 +7,32 @@ See `https://github.com/EnzeXu/Translator` or
 $ git clone https://github.com/EnzeXu/Translator.git
 ```
 
+Set virtual environment and install packages:
+```shell
+$ python -m venv ./venv
+$ source venv/bin/activate
+(venv) $ pip install -r requirements.txt
+```
+
 Install package `words` in advance:
 ```shell
-$ python -m nltk.downloader words -d venv/nltk_data 
+(venv) $ python -m nltk.downloader words -d venv/nltk_data 
 ```
 
 Edit file `baidu_account_example.py` and then rename it as `baidu_account.py` in advance:
 ```shell
-$ mv baidu_account_example.py baidu_account.py
+(venv) $ vi baidu_account_example.py
+(venv) $ mv baidu_account_example.py baidu_account.py
+```
+
+Run
+```shell
+(venv) $ python run.py -p ${PDF_FILE_PATH}
+(venv) $ mv baidu_account_example.py baidu_account.py
+```
+
+Exit virtual environment
+```shell
+(venv) $ deactivate
+$ 
 ```
