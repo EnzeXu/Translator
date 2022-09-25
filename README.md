@@ -14,7 +14,7 @@ $ source venv/bin/activate
 (venv) $ pip install -r requirements.txt
 ```
 
-Install package `words` in advance:
+Install dictionary `words` in advance:
 ```shell
 (venv) $ python -m nltk.downloader words -d venv/nltk_data 
 ```
@@ -28,7 +28,6 @@ Edit file `baidu_account_example.py` and then rename it as `baidu_account.py` in
 Run
 ```shell
 (venv) $ python run.py -p ${PDF_FILE_PATH}
-(venv) $ mv baidu_account_example.py baidu_account.py
 ```
 
 Exit virtual environment
