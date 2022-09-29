@@ -35,8 +35,8 @@ def run():
             if answer not in ["Y", "y"]:
                 print("Exit.")
                 return
-        else:
-            translator(detected_path, translated_path)
+            else:
+                translator(detected_path, translated_path)
 
     all_pages_directory = "pages/{}/".format(filename)
     pages_dic = create_pdf_pages(translated_path, all_pages_directory)
